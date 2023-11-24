@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+#product_form {
+  width: 350px;
+
+  .form-group {
+    position: relative;
+    @extend %d-flex;
+    @extend %justify-between;
+    @extend %flex-wrap;
+    margin-bottom: var.$gutter-base;
+
+    span {
+      margin-top: var.$gutter-base;
+    }
+
+    input {
+      flex: 0 1 65%;
+    }
+  }
+}
+

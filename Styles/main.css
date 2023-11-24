@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+body {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#product_form .form-group, header, main {
+  display: flex;
+}
+
+#product_form .form-group, main {
+  flex-wrap: wrap;
+}
+
+#product_form .form-group, header {
+  justify-content: space-between;
+}
+
+#products .product .product-container, #products .product .product-container:hover {
+  transition: all 0.3s ease;
+}
+
+footer, #products .product .product-container .product-description > *:not([type=checkbox]) {
+  text-align: center;
+}
+
+header .buttons-container {
+  text-align: right;
+}
+
+#products .product .product-container {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+main {
+  align-content: baseline;
+  margin-top: 1.875rem;
+  min-height: calc(100vh - 215px);
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+
+input, select {
+  padding: 0.3125rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  color: black;
+}
+.btn:hover {
+  color: #ffffff;
+  transition: all 0.35s ease;
+}
+.btn:not(#delete-product-btn) {
+  border: 2px solid #3e96d1;
+}
+.btn:not(#delete-product-btn):hover {
+  background-color: #3e96d1;
+}
+.btn#delete-product-btn {
+  border: 2px solid #d13e3e;
+}
+.btn#delete-product-btn:hover {
+  background-color: #d13e3e;
+}
+
+.validateFail {
+  border: 2px solid red;
+}
+
+.error-notification {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: right;
+  font-size: 14px;
+  color: red;
+}
+
+#errorException {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: rgba(255, 0, 0, 0.25);
+  text-align: center;
+  border: 2px solid red;
+  border-radius: 10px;
+}
+#errorException p {
+  margin: 0;
+}
+
+header {
+  padding: 2.8125rem 0 0.9375rem;
+  border-bottom: 2px solid black;
+  margin-bottom: 1.875rem;
+}
+header .buttons-container > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+#products {
+  margin-right: -1.875rem;
+}
+#products .product {
+  flex-basis: 25%;
+  margin-bottom: 1.875rem;
+}
+@media (max-width: 800px) {
+  #products .product {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 600px) {
+  #products .product {
+    flex-basis: 100%;
+  }
+}
+#products .product .product-container {
+  padding: 0.9375rem;
+  margin-right: 1.875rem;
+  border: 2px solid black;
+  cursor: pointer;
+}
+#products .product .product-container:hover {
+  transform: scale(1.05);
+}
+#products .product .product-container .product-description {
+  padding: 0.9375rem;
+}
+footer {
+  padding: 1.875rem;
+  border-top: 2px solid black;
+  position: static;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+}
+
+#product_form {
+  width: 350px;
+}
+#product_form .form-group {
+  position: relative;
+  margin-bottom: 1.875rem;
+}
+#product_form .form-group span {
+  margin-top: 1.875rem;
+}
+#product_form .form-group input {
+  flex: 0 1 65%;
+}
+
+/*# sourceMappingURL=main.css.map */

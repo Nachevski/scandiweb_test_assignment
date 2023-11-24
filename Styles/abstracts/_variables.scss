@@ -1,0 +1,17 @@
+@function rem-calc($size) {
+  @return (calc($size/16)) * 1rem;
+}
+
+// Font settings
+$font-family-base: "Ubuntu", sans-serif;
+
+// Size settings
+$gutter-base: rem-calc(30);
+
+// Color colors
+$text-color-base: #000;
+$text-color-primary: #fff;
+
+// Button colors
+$bg-button-primary: #3e96d1;
+$bg-button-delete: #d13e3e;

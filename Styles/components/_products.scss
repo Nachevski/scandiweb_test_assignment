@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+#products {
+  margin-right: - var.$gutter-base;
+
+  .product {
+    flex-basis: 25%;
+    margin-bottom: var.$gutter-base;
+
+    @include mix.tablet {
+      flex-basis: 50%;
+    }
+    @include mix.mobile-l {
+      flex-basis: 100%;
+    }
+
+    .product-container {
+      padding: var.$gutter-base/2;
+      margin-right: var.$gutter-base;
+      border: 2px solid black;
+      @extend %default-transition;
+      cursor: pointer;
+      @extend %h-100;
+
+      &:hover {
+        transform: scale(1.05);
+        @extend %default-transition;
+      }
+
+      .product-description {
+        padding: var.$gutter-base/2;
+
+        & > *:not([type='checkbox']) {
+          @extend %text-center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+footer {
+  padding: var.$gutter-base;
+  border-top: 2px solid black;
+  @extend %text-center;
+  position: static;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+}

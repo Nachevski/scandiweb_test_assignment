@@ -1,0 +1,41 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 0;
+  font-family: "Ubuntu", sans-serif;
+  @extend %wrap;
+}
+
+main {
+  @extend %d-flex;
+  @extend %flex-wrap;
+  align-content: baseline;
+  margin-top: var.$gutter-base;
+  min-height: calc(100vh - 215px);
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+}
+
+input, select {
+  padding: var.$gutter-base/6;
+}
