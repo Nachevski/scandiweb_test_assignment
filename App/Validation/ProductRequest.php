@@ -2,9 +2,9 @@
 
 namespace App\Validation;
 
-class Request
+class ProductRequest
 {
-    private static $rules = [
+    private $rules = [
         'sku' => 'required|unique',
         'name' => 'required',
         'price' => 'required|numeric',
@@ -14,30 +14,32 @@ class Request
         'height' => 'required|numeric',
         'width' => 'required|numeric',
         'length' => 'required|numeric',
+        //Add new rules for inputs
     ];
-    private static $notifications = [
+    private $notifications = [
         'unique' => 'SKU already exist! It must be UNIQUE!',
         'required' => 'Please, submit required data',
         'numeric' => 'Please, provide the data of indicated type'
+        //Change default notification messages
     ];
-
-    private static $patterns = [
+    private $patterns = [
         'required' => '(^$)',
         'numeric' => '/([^0-9])([^,.]{0})$/'
+        //Add new patterns
     ];
 
-    public static function getRules($request)
+    public function getRules($request)
     {
-        return self::$rules[$request];
+        return $this->rules[$request];
     }
 
-    public static function getNotification($request)
+    public function getNotification($request)
     {
-        return self::$notifications[$request];
+        return $this->notifications[$request];
     }
 
-    public static function getPattern($request)
+    public function getPattern($request)
     {
-        return self::$patterns[$request];
+        return $this->patterns[$request];
     }
 }

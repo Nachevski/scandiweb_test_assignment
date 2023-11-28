@@ -8,7 +8,8 @@ header("Access-Control-Allow-Headers: Content-Type");
 use App\Validation\Validator;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST)) {
-    echo json_encode(Validator::validate($_POST));
+    $validator = new Validator();
+    echo json_encode($validator->validate($_POST));
     die();
 }
 header('LOCATION: /');

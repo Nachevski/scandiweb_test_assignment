@@ -2,7 +2,7 @@
 
 namespace App\Products;
 
-use App\Database\Database;
+use App\Database\DatabaseConnection;
 
 class Furniture extends Product
 {
@@ -84,7 +84,8 @@ class Furniture extends Product
 
     public function saveToDB()
     {
-        $conn = Database::connect();
+        $db = new DatabaseConnection();
+        $conn = $db->DBconnect();
         $dimensions = substr($this->getProductDescription(), 12);
         $query = "INSERT INTO products (sku, name, price, product_description, product_type)
          values('$this->sku',

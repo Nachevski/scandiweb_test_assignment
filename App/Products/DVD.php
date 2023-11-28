@@ -2,7 +2,7 @@
 
 namespace App\Products;
 
-use App\Database\Database;
+use App\Database\DatabaseConnection;
 
 class DVD extends Product
 {
@@ -72,7 +72,8 @@ class DVD extends Product
 
     public function saveToDB()
     {
-        $conn = Database::connect();
+        $db = new DatabaseConnection();
+        $conn = $db->DBconnect();
         $query = "INSERT INTO products (sku, name, price, product_description, product_type)
          values('$this->sku',
              '$this->name',

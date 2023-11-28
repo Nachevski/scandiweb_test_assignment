@@ -1,9 +1,12 @@
 <?php
+
+use App\Products\ProductFactory;
+
 require_once('autoload.php');
 
-use App\Database\Database;
 
-$data = Database::getProducts();
+$factory = new ProductFactory();
+$data = $factory->getProducts();
 $products = [];
 foreach ($data as $product) {
     $className = 'App\\Products\\' . $product['product_type'];

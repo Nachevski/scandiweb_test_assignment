@@ -15,4 +15,5 @@ abstract class Product
     abstract function setProductDescription(array|string $data);
 
     abstract function saveToDb();
+    
 }

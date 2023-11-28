@@ -4,9 +4,10 @@ namespace App\Database\Queries;
 
 interface ProductQueries
 {
-    public static function getProducts();
+    public function getProducts();
 
-    public static function deleteProducts(array $products);
+    public function deleteProducts(array $products);
 
-    public static function isUnique($column, $value);
+    public function isUnique($column, $value);
+    
 }
